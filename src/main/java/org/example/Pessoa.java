@@ -6,10 +6,20 @@ public class Pessoa {
 
 
     public Pessoa(String nome, int idade) {
+        if(nome == null){
+            throw new NullPointerException();
+        }
+
+        if (idade < 0 || idade > 100) {
+            throw new IllegalArgumentException();
+        }
         this.nome = nome;
         this.idade = idade;
     }
 
+    public boolean verificaIdade() {
+        return this.idade >= 18;
+    }
 
     public String getNome() {
         return nome;
@@ -27,4 +37,3 @@ public class Pessoa {
         this.idade = idade;
     }
 }
-

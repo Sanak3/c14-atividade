@@ -1,6 +1,8 @@
 package org.example;
 
 import com.google.gson.Gson;
+import org.junit.Test;
+import org.junit.Assert.*;
 
 public class Main {
     public static void main(String[] args) {
