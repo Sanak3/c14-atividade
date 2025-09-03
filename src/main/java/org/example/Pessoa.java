@@ -1,5 +1,7 @@
 package org.example;
 
+import java.sql.SQLOutput;
+
 public class Pessoa {
     private String nome ;
     private int idade;
@@ -19,6 +21,15 @@ public class Pessoa {
 
     public boolean verificaIdade() {
         return this.idade >= 18;
+    }
+
+    public void faixaEtaria (){
+        if (this.idade > 18 && this.idade < 60 ) {
+            System.out.println("Adulto");
+        }
+        else if (this.idade > 60){
+            System.out.println("Idoso");
+        }
     }
 
     public String getNome() {

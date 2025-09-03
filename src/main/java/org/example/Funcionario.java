@@ -9,4 +9,15 @@ public class Funcionario extends Pessoa{
         this.numero = numero;
         this.salario = salario;
     }
+
+    public void bonusSalario(float salario){
+        this.salario = salario + (salario * 0.10f);
+    }
+
+     public void salarioNaoNegativo(){
+        if (salario < 0){
+            throw new IllegalArgumentException();
+        }
+
+     }
 }
